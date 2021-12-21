@@ -286,5 +286,11 @@ $("#remove-tasks").on("click", function() {
   saveTasks();
 });
 
+setInterval(function () {
+  $(".card .list-group-item").each(function(index, el){
+    auditTasl(el);
+  });
+}, 1800000);
+
 // load tasks for the first time
 loadTasks();
